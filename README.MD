@@ -1,4 +1,8 @@
-# Icon/Picture Credits
+# Assignment 7
+
+Site Link: https://jaspercrew.github.io/cmpm148_hw7/
+
+Icon/Picture Credits
 
 All under CC BY 3.0
 
