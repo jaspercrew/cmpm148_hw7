@@ -17,7 +17,8 @@ function drawFromDeck(){
 }
 function shuffleIntoDeck(card, fromPool=true){
   addToTopDeck(card, fromPool)
-  shuffleDeck(deck)
+  //shuffleDeck(deck)
+  shuffleArray(deck)
 }
 
 // shuffles the deck and then arranges by priority
@@ -33,6 +34,16 @@ function shuffleDeck(array){
   
     return newArray;
   }
+
+  //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
   
   
   function addPackToDeck(pack){
@@ -75,9 +86,9 @@ function shuffleDeck(array){
           card[labels[i]] = localFunction;
         }
       } 
-        console.log(card)
+      //   console.log(card)
       
-      console.log(values)
+      // console.log(values)
       
       cardPool.uniqueIDList.push(values[0])
       cardPool[values[0]] = card;

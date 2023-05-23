@@ -59,13 +59,52 @@
 <!-- this data should be exported as a "tab separated", that is what our interpretation function expects -->
 <!-- here is the URL for the google sheet for this project:  https://docs.google.com/spreadsheets/d/1y6r9WXb2a9FA0KxBa__Y3LriUq8_KHakMViJ2irY5D4/edit?usp=sharing -->
 <pre id="data" style="visibility:collapse; display: none">
-ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
-q	Do you have Nuts?	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.jpg	1	bumbling
-w	Hey a Person	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.png	2	bumbling
-e	Squeak	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.png	2	bumbling
-r	(Panicking)	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog	Something Alarms Your	Squirrel.png	1	bumbling
-tr	woops	What?	addResource("meat", 20);addResource("veggies", -20)	What?	addResource("meat", -20);addResource("veggies", 20)	Dog		Squirrel.png	2	bumbling
-
+  ID (unique)	prompt	rightChoiceText	rightChoice	leftChoiceText	leftChoice	name	resultText	image	priority	pack
+  1	I want to buy more ingredients to upgrade our menu.	Ok	addResource("ingredients", 20);addResource("money", -20);	Nope	addResource("ingredients", -20);addResource("money", 20); 	chef		chef.svg	1	main
+  2	I want to use worms as a cost effective measure for protein.	Ok	addResource("ingredients", 20);addResource("ratings", -20);	Eww	addResource("ingredients", -20);addResource("ratings", 20);	chef		chef.svg	1	main
+  3	We should buy a sous vide machine so I can make fancy foods easier.	Ok	addResource("ratings", 20);addResource("money", -20);	Nope	addResource("ratings", -20);addResource("money", 20);	chef		chef.svg	1	main
+  4	What kind of specials should we have for the day?	Vegetarian	addResource("ratings", 5);addResource("money", -5);	Seafood	addResource("ratings", 15);addResource("money", -15);	chef		chef.svg	1	main
+  5	There's a fire in the kitchen!	Put it out!	addResource("loyalty", 20);	Whatever	addResource("loyalty", -20);	chef		chef.svg	1	main
+  6	I think we should serve fancier foods.	Ok	addResource("ratings", 20);addResource("money", -20);	Nope	addResource("ratings", -10);addResource("money", 10);	chef		chef.svg	1	main
+  7	There's a rat infestation in the kitchen.	Call the exterminator	addResource("ratings", 10);addResource("money", -10);	Use them as ingredients	addResource("ratings", -10);addResource("ingredients", 10);	chef		chef.svg	1	main
+  8	I want higher pay.	Ok	addResource("loyalty", 10);addResource("money", -10);	Nope	addResource("loyalty", -10);addResource("money", 10);	chef		chef.svg	1	main
+  9	I want an assistant.	Ok	addResource("loyalty", 10);addResource("money", -10);	Nope	addResource("loyalty", -10);addResource("money", 10);	chef		chef.svg	1	main
+  10	We should stop serving beef entirely.	Ok	addResource("loyalty", 10);addResource("ratings", -10);	Nope	addResource("loyalty", -10);addResource("ratings", 10);	chef		chef.svg	1	main
+  11	There was a hair in my food!	Offer replacement.	addResource("ratings", 10);addResource("ingredients", -10);	Whatever	addResource("ratings", -10);	customer		customer.svg	1	main
+  12	Can I get a free fortune cookie?	Ok	addResource("ratings", 10);addResource("ingredients", -10);	Nope	addResource("ratings", -10);addResource("money", 10);	customer		customer.svg	1	main
+  13	I want you to fire your waiters, they're terrible.	Ok	addResource("ratings", 5);addResource("loyalty", -25);	Nope	addResource("loyalty", 15);	customer		customer.svg	1	main
+  14	You guys should put on a buy one meal get another free deal.	Ok	addResource("ratings", 10);addResource("money", -10);	Nope	addResource("ratings", -10);addResource("money", 10);	customer		customer.svg	1	main
+  15	This food sucks.	We'll change the menu.	addResource("ratings", 10);addResource("ingredients", -20);	Whatever	addResource("ratings", -10);addResource("ingredients", 10);	customer		customer.svg	1	main
+  16	You guys should add lunchables to the menu!	Ok	addResource("ratings", 10);addResource("money", 10);	Nope	addResource("ratings", -10);	customer		customer.svg	1	main
+  17	You guys need to expand your business, the waits are too long!	Ok	addResource("ratings", 20);addResource("money", -10);	Nope	addResource("ratings", -10);addResource("money", 5);	customer		customer.svg	1	main
+  18	I had a great meal. Here's a tip!	Ok	addResource("money", 10);	Okay!	;addResource("money", 10);	customer		customer.svg	1	main
+  19	It's my birthday. Can I get a free cake?	Ok	addResource("ratings", 10);addResource("ingredients", -10);addResource("loyalty", -10);	Nope	addResource("ratings", -10);addResource("money", 10);	customer		customer.svg	1	main
+  20	You need to clean the restroom.	Ok	addResource("loyalty", 10);addResource("ratings", 10);addResource("money", -10);	Nope	addResource("ratings", -5);	customer		customer.svg	1	main
+  21	Table for 18!	We'll find a spot.	addResource("ratings", 10);addResource("loyalty", -10);	Not a chance.	addResource("ratings", -10);addResource("loyalty", 10);	customer		customer.svg	1	main
+  22	We need to cut spending on our ingredients.	Ok	addResource("money", 10);addResource("ingredients", -10);	Nope.	addResource("money", -10);addResource("ingredients", 10);	accountant		accountant.svg	1	main
+  23	We should totally commit tax fraud.	Ok	addResource("money", 10);	Not a chance.	addResource("money", -10);addResource("loyalty", 10);	accountant		accountant.svg	1	main
+  24	We should shrink our establishment.	Ok	addResource("money", 10);addResource("ratings", -10);	Nope.	addResource("money", -10);addResource("ratings", 10);	accountant		accountant.svg	1	main
+  25	We should fire some of our staff to cut costs.	Ok	addResource("money", 10);addResource("loyalty", -10);addResource("ratings", -5);	Nope.	addResource("money", -10);addResource("loyalty", 10);	accountant		accountant.svg	1	main
+  26	We should spend oodles of money on fake reviews.	Ok	addResource("money", -30);addResource("ratings", 20);	Nope.	addResource("money", 10);addResource("ratings", -10);	accountant		accountant.svg	1	main
+  27	Can I get a raise?	Ok	addResource("money", -10);addResource("loyalty", 10);	Nope.	addResource("money", 10);addResource("loyalty", -10);	accountant		accountant.svg	1	main
+  28	We should replace some of our staff with robots!!	Ok	addResource("money", 10);addResource("loyalty", -10);	Nope.	addResource("money", -10);addResource("loyalty", 10);	accountant		accountant.svg	1	main
+  29	We should get deal with wholesale companies for ingredients.	Ok	addResource("money", -10);addResource("ingredients", 20);	Nope.	addResource("money", 5);addResource("ingredients", -10);	accountant		accountant.svg	1	main
+  30	I can set up an advertisement campaign to boost our ratings.	Ok	addResource("money", -10);addResource("ratings", 10);	Nope.	addResource("money", 10);addResource("ratings", -10);	accountant		accountant.svg	1	main
+  31	I want to upgrade my equipment with computers.	Ok	addResource("money", -10);addResource("loyalty", 10);	Nope.	addResource("money", 10);addResource("loyalty", -10);	accountant		accountant.svg	1	main
+  32	We can boost employee morale if we pay them more.	Ok	addResource("money", -10);addResource("loyalty", 10);	Nope.	addResource("money", 10);addResource("loyalty", -10);	accountant		accountant.svg	1	main
+  33	We should add some TVs to our establishment.	Ok	addResource("money", -10);addResource("loyalty", 10);addResource("ratings", 10);	Nope.	addResource("money", 10);addResource("ratings", -5);	accountant		accountant.svg	1	main
+  34	We should add a dessert menu with some fancy pastries!	Ok	addResource("money", -10);addResource("ratings", 10);	Nope.	addResource("money", 5);addResource("ratings", -5);	chef		chef.svg	1	main
+  35	Can I have the day off? 	Ok	addResource("ratings", -10);addResource("loyalty", 10);	Nope.	addResource("ratings", 10);addResource("loyalty", 10);	chef		chef.svg	1	main
+  36	What kind of food should we add to the menu?	Fancy	addResource("money", -10);addResource("ratings", 10);	Cheap	addResource("money", 5);addResource("ratings", -5);	chef		chef.svg	1	main
+  37	What sort of special events should we have?	Surf and Turf day	addResource("money", -10);addResource("ratings", 10);	Plain rice day	addResource("money", 5);addResource("ratings", -5);	chef		chef.svg	1	main
+  38	I must humbly request that I receive only the best cuisine for my sustenence today.	Sure...	addResource("money", -10);addResource("ratings", 10);	What?	addResource("ratings", -5);	critic		critic.svg	1	main
+  39	If you deliver some funds to me, I will ensure that my review will display your excellence.	Ok	addResource("money", -10);addResource("ratings", 20);	What?	addResource("ratings", -5);	critic		critic.svg	1	main
+  40	Your humble foods are so basic. I must request a more appropriate cuisine for my palette. 	Sure...	addResource("ingredients", -20);addResource("ratings", 10);	Nope.	addResource("ratings", -5); addResource("ingredients", 10);	critic		critic.svg	1	main
+  41	Caviar. Now.	Sure...	addResource("money", -30);addResource("ratings", 10);	What?	addResource("ratings", -5);	critic		critic.svg	1	main
+  42	You must redo the furniture here. The feng shui is all off.	Sure...	addResource("money", -10);addResource("ratings", 10);addResource("loyalty", -10);	What?	addResource("ratings", -5);addResource("loyalty", 10);	critic		critic.svg	1	main
+  43	I must ask, what is your opinion of me?	You're great!	addResource("loyalty", -10);addResource("ratings", 10);	You suck...	addResource("ratings", -5);	critic		critic.svg	1	main
+  44	I must humbly request that I receive only the best cuisine for my sustenence today.	Sure...	addResource("money", -10);addResource("ratings", 10);	What?	addResource("ratings", -5);	critic		critic.svg	1	main
+  
 </pre>
 
 </body>

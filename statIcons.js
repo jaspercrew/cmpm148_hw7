@@ -1,8 +1,8 @@
 let resources = [
-  {key: "ingredients", value: 50,image: "./images/meat.svg", },
-  {key: "ratings", value: 50,image: "./images/meat.svg", },
-  {key: "funds", value: 50,image: "./images/meat.svg", },
-  {key: "loyalty", value: 50, image: "./images/carrot.svg"}
+  {key: "ingredients", value: 50,image: "./images/ingredients.svg", },
+  {key: "ratings", value: 50,image: "./images/ratings.svg", },
+  {key: "money", value: 50,image: "./images/money.svg", },
+  {key: "loyalty", value: 50, image: "./images/loyalty.svg"}
 ]
 
 function addResource(key, amount){
@@ -43,10 +43,13 @@ function checkFail() {
     let f = failures[x];
     for ( i in failCards){
       let failCard = failCards[i];
-      if (failCard.resource === f.resource && failCard.level === f.level)
+      if (failCard.resource === f.resource && failCard.level === f.level){
         addToTopDeck(failCard.card, false)
-      else
+        return;
+      }
+      else {
         addToTopDeck(defaultFailCard, false)
+      }
     }
     
   }
