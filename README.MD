@@ -11,4 +11,7 @@ All under CC BY 3.0
     Ingredients: https://game-icons.net/1x1/lorc/sliced-bread.html
     Money: https://game-icons.net/1x1/delapouite/credits-currency.html
     Ratings: https://game-icons.net/1x1/lorc/smitten.html
+    
+    https://lorcblog.blogspot.com/
+    https://delapouite.com/
 
